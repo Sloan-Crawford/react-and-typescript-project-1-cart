@@ -1,0 +1,26 @@
+[
+ {
+  "id": 1,
+  "name": "Branching Out",
+  "price": 275,
+  "imgUrl": "/public/images/Branching-Out.jpeg"
+ },
+ {
+  "id": 2,
+  "name": "Out Of Silence We Will Sing",
+  "price": 275,
+  "imgUrl": "/public/images/OUT-OF-SILENCE-WE-WILL-SING.jpeg"
+ },
+ {
+  "id": 3,
+  "name": "Slow Dancing With Flowers",
+  "price": 350,
+  "imgUrl": "/public/images/Slowdancing-With-Flowers.jpeg"
+ },
+ {
+  "id": 4,
+  "name": "Unwind",
+  "price": 450,
+  "imgUrl": "/public/images/Unwind.jpeg"
+ }
+]
