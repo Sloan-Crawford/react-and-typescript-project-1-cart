@@ -16,19 +16,23 @@ export function StoreItem({id, name, price, imgUrl}:StoreItemProps) {
   removeFromCart,
  } = useShoppingCart()
  const quantity = getItemQuantity(id)
+
  return (
  <Card className="h-100">
   <Card.Img variant="top" src={imgUrl} height="250px" style={{objectFit: "cover"}} />
   <Card.Body className="d-flex flex-column">
    <Card.Title className="d-flex flex-column justify-content-between align-items-baseline mb-1">
-    <div className="fs-5 mb-3">{name}</div>
-    <div className="fs-6 mb-1 text-muted">{formatCurrency(price)}</div>
-
-   </Card.Title>
-   <div className="mt-auto">
-    <Button className="fs-6"> + Add to Cart</Button>
+    <div className="fs-5 mb-2">{name}</div>
+    <div className="d-flex align-items-center">
+     <div className="fs-6 mb-1 text-muted me-3">{formatCurrency(price)}</div>
+   <div>
+    {quantity === 0 ? (
+     <Button className="fs-7 me-2" size="sm" variant="info" onClick={() => increaseCartQuantity(id)}> + Add to Cart</Button>) : (
+      <Button className="fs-7 me-2" size="sm" onClick={() => removeFromCart(id)} variant="danger">- Remove</Button> )}
    </div>
-   <Button variant="danger" size="sm">Remove</Button>
+   </div>
+      </Card.Title>
+   
   </Card.Body>
  </Card>
  )

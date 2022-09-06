@@ -1,8 +1,12 @@
 import { createContext, ReactNode, useContext, useState } from "react";
+import { ShoppingCart } from "../components/ShoppingCart";
+import { useLocalStorage } from "../hooks/useLocalStorage";
 
 type ShoppingCartProviderProps = {
  children: ReactNode //the type that I give to the children property inside of React
 }
+
+
 
 type CartItem = {
  id: number
@@ -10,9 +14,13 @@ type CartItem = {
 }
 
 type ShoppingCartContext = {
- getCartQuantity: (id:number) => number
+ openCart: () => void
+ closeCart: () => void
+ getItemQuantity: (id:number) => number
  increaseCartQuantity: (id:number) => void
  removeFromCart: (id: number) => void
+ cartQuantity: number
+ cartItems: CartItem[]
 }
 
 const ShoppingCartContext = createContext({})
@@ -25,12 +33,17 @@ export function useShoppingCart() {
 // implement provider portion (gives all values, render out shopping cart):
 // (note: providers always need to have objects and children inside of them)
 export function ShoppingCartProvider( { children }: ShoppingCartProviderProps) {
- const [cartItems, setCartItems] = useState<CartItem[]>([])
+ const [isOpen, setIsOpen] = useState(false)
+ const [cartItems, setCartItems] = useLocalStorage<CartItem[]>("shopping-cart",[])
+
+ const cartQuantity = cartItems.reduce((quantity, item) => item.quantity + quantity, 0)
+
+const openCart = () => setIsOpen(true)
+const closeCart = () => setIsOpen(false)
 
 function getItemQuantity(id: number) {
  return cartItems.find(item => item.id === id)?.quantity || 0
 }
-
 function increaseCartQuantity(id: number) {
  setCartItems(currItems => {
   if (currItems.find(item => item.id === id) == null) {
@@ -46,7 +59,6 @@ function increaseCartQuantity(id: number) {
   }
  })
 }
-
 function removeFromCart (id: number) {
  setCartItems(currItems => {
   return currItems.filter(item => item.id !== id)
@@ -54,8 +66,19 @@ function removeFromCart (id: number) {
 }
 
  return (
- <ShoppingCartContext.Provider value={({getItemQuantity, increaseCartQuantity, removeFromCart})}>
+ <ShoppingCartContext.Provider 
+ value={{
+  getItemQuantity, 
+  increaseCartQuantity, 
+  removeFromCart,
+  openCart,
+  closeCart,
+  cartItems,
+  cartQuantity,
+  }}
+  >
   {children}
+  <ShoppingCart  isOpen={isOpen}/>
   </ShoppingCartContext.Provider>
   )
 }
