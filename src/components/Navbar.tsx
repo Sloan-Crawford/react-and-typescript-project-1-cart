@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom"
 import { useShoppingCart } from "../context/ShoppingCartContext"
 
 export function Navbar() {
- const { openCart, cartQuantity } = useShoppingCart()
+ const { openCart, cartQuantity }: any = useShoppingCart()
  return (
  <NavbarBs className="bg-light shadow-sm mb-3" sticky="top">
   <Container style={{height:"45px"}}>

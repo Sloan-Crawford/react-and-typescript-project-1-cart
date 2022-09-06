@@ -6,8 +6,6 @@ type ShoppingCartProviderProps = {
  children: ReactNode //the type that I give to the children property inside of React
 }
 
-
-
 type CartItem = {
  id: number
  quantity: number

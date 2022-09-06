@@ -9,9 +9,9 @@ type CartItemProps = {
 
 }
 
-export function CartItem({ id}: CartItemProps) {
- const { removeFromCart } = useShoppingCart()
- const item = storeItems.find(i => i.id === id)
+export function CartItem({ id }: CartItemProps) {
+ const { removeFromCart }: any = useShoppingCart()
+ const item: any = storeItems.find(i => i.id === id)
  if (item === null) return null
 
  return (

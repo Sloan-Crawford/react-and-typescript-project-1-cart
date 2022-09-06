@@ -11,7 +11,7 @@ type ShoppingCartProps = {
 
 
 export function ShoppingCart({ isOpen }: ShoppingCartProps) {
- const { closeCart, cartItems } = useShoppingCart()
+ const { closeCart, cartItems }: any = useShoppingCart()
  return (
  <Offcanvas show={isOpen} onHide={closeCart} placement="end">
   <Offcanvas.Header closeButton>
