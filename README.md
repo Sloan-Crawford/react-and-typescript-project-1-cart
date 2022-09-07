@@ -4,8 +4,9 @@ Shopping carts are one of the most common things web developers are asked to bui
 
 **Key features**:
 
-- Integration of React, Typescript and Bootstrap in a well-organized professional website.
-- Routing
+- Integration of React, Typescript and Bootstrap
+- A well-organized, professional website
+- Effective use of Routing
 - Components: Navbar, Shopping Cart, StoreItems
 - Pages: Homepage, Store, About
 - Shopping cart context, json data integration
@@ -15,7 +16,7 @@ Shopping carts are one of the most common things web developers are asked to bui
 
 - Effective use of React library, Typescript and integration of Bootstrap
 - Utilization of professional folder organization with src components, context, data, hooks, pages and utilities.
-- Clear, maintainable, and scalable code with nice layout and architecture
+- Clear, maintainable, and scalable code with responsive layout and architecture
 
 ## More projects by Sloan Crawford:
 
