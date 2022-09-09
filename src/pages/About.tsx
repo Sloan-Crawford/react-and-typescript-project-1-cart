@@ -1,3 +1,8 @@
+import AboutCards from "../components/AboutCards";
+
 export function About() {
- return <h1>About</h1>
+ return (
+  <div>
+ <AboutCards/>
+ </div>)
 }

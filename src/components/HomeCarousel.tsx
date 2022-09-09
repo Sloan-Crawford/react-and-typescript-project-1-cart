@@ -1,44 +1,42 @@
-import { Carousel, Image } from 'react-bootstrap';
+import { Carousel } from 'react-bootstrap';
 
-function HomeCarousel() {
+export function HomeCarousel() {
   return (
-    <Carousel >
+    <Carousel variant="dark">
       <Carousel.Item interval={2500} style={{height:"75vh"}}>
         <img
           className="d-block img-fluid"
-          src="/public/images/Branching-Out.jpeg"
+          src="/images/Slowdancing-With-Flowers.jpeg"
           // style={{objectFit: "cover"}}
           alt="First slide"
         />
-        <Carousel.Caption style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)', borderRadius:'10px'}}>
+        <Carousel.Caption style={{ backgroundColor: 'rgba(255,255,255, 0.6)', borderRadius:'10px'}}>
           <h3>Embroidery Paintings</h3>
-          <p>Current collection for sale in Store</p>
+          <p>Current collection for sale in Store!</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item interval={2500} style={{height:"75vh"}}>
         <img
           className="d-block img-fluid"
-          src="/public/images/OUT-OF-SILENCE-WE-WILL-SING.jpeg"
+          src="/images/Hermano.png"
           alt="Second slide"
         />
-        <Carousel.Caption style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)', borderRadius:'10px'}}>
-          <h3>Embroidery Paintings</h3>
-          <p>Current collection for sale in Store</p>
+        <Carousel.Caption style={{backgroundColor: 'rgba(255,255,255, 0.6)', borderRadius:'10px'}}>
+          <h3>Portraits</h3>
+          <p>New collection coming soon</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item interval={2500} style={{height:"75vh"}}>
-        <img
+        <img 
           className="d-block img-fluid"
-          src="/public/images/Slowdancing-With-Flowers.jpeg"
+          src="/images/Landscape.jpeg"
           alt="Third slide"
         />
-        <Carousel.Caption style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)', borderRadius:'10px'}}>
-          <h3>Embroidery Paintings</h3>
-          <p>Current collection for sale in Store</p>
+        <Carousel.Caption style={{ backgroundColor: 'rgba(255,255,255, 0.6)', borderRadius:'10px'}}>
+          <h3>Ladscapes</h3>
+          <p>In progress</p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
   );
 }
-
-export default HomeCarousel;
