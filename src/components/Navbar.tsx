@@ -18,6 +18,10 @@ export function Navbar() {
      About 
     </Nav.Link>
    </Nav>
+   <a target="#" href="https://www.instagram.com/michellemarinstudio/" className='d-flex align-items-center justify-content-center'>
+    <img width="18rem" src="/images/instagram.svg" alt="instagram logo" className='me-4'/></a>
+   <a target="#" href="mailto: michelle.erin.marin@gmail.com" className='d-flex align-items-center justify-content-center'>
+    <img width="18rem" src="/images/envelope.svg" alt="instagram logo" className='me-5'/></a>
    {cartQuantity > 0 && (
    <Button onClick={openCart} 
     style={{ position: "relative", width: "2.8rem", height: "2.8rem"}}

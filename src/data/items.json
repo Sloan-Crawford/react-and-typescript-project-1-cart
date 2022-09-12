@@ -19,8 +19,20 @@
  },
  {
   "id": 4,
-  "name": "Unwind",
+  "name": "Wildflowers At Dawn",
   "price": 450,
-  "imgUrl": "/images/Unwind.jpeg"
+  "imgUrl": "/images/WildflowersAtDawn.jpeg"
+ },
+ {
+  "id": 5,
+  "name": "Reaching Out",
+  "price": 450,
+  "imgUrl": "/images/ReachingOut.jpeg"
+ },
+ {
+  "id": 6,
+  "name": "Don Valley",
+  "price": 450,
+  "imgUrl": "/images/DonValley.jpeg"
  }
 ]

@@ -7,10 +7,10 @@ export function HomeCarousel() {
         <img
           className="d-block img-fluid"
           src="/images/Slowdancing-With-Flowers.jpeg"
-          // style={{objectFit: "cover"}}
           alt="First slide"
         />
-        <Carousel.Caption style={{ backgroundColor: 'rgba(255,255,255, 0.6)', borderRadius:'10px'}}>
+        <Carousel.Caption style={{ backgroundColor: 'rgba(255,255,255, 0.8)', borderRadius:'5px', padding:
+      "0.6rem"}}>
           <h3>Embroidery Paintings</h3>
           <p>Current collection for sale in Store!</p>
         </Carousel.Caption>
@@ -18,10 +18,11 @@ export function HomeCarousel() {
       <Carousel.Item interval={2500} style={{height:"75vh"}}>
         <img
           className="d-block img-fluid"
-          src="/images/Hermano.png"
+          src="/images/MotherToAll.jpeg"
           alt="Second slide"
         />
-        <Carousel.Caption style={{backgroundColor: 'rgba(255,255,255, 0.6)', borderRadius:'10px'}}>
+        <Carousel.Caption style={{backgroundColor: 'rgba(255,255,255, 0.8)', borderRadius:'5px', padding:
+      "0.6rem"}}>
           <h3>Portraits</h3>
           <p>New collection coming soon</p>
         </Carousel.Caption>
@@ -29,10 +30,11 @@ export function HomeCarousel() {
       <Carousel.Item interval={2500} style={{height:"75vh"}}>
         <img 
           className="d-block img-fluid"
-          src="/images/Landscape.jpeg"
-          alt="Third slide"
+          src="/images/LookUpAtTheStars.jpeg"
+          alt=""
         />
-        <Carousel.Caption style={{ backgroundColor: 'rgba(255,255,255, 0.6)', borderRadius:'10px'}}>
+        <Carousel.Caption style={{ backgroundColor: 'rgba(255,255,255, 0.8)', borderRadius:'5px', padding:
+      "0.6rem"}}>
           <h3>Ladscapes</h3>
           <p>In progress</p>
         </Carousel.Caption>
