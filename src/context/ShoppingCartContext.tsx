@@ -28,7 +28,7 @@ export function useShoppingCart() {
  return useContext(ShoppingCartContext)
 }
 
-// implement provider portion (gives all values, render out shopping cart):
+// implement provider portion (gives all values, renders out shopping cart):
 // (note: providers always need to have objects and children inside of them)
 export function ShoppingCartProvider( { children }: ShoppingCartProviderProps) {
  const [isOpen, setIsOpen] = useState(false)

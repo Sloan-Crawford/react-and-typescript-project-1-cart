@@ -3,7 +3,7 @@ import { useShoppingCart } from "../context/ShoppingCartContext"
 import { formatCurrency } from "../utilities/formatCurrency"
 
 type StoreItemProps = {
-id: number
+ id: number
  name: string
  price: number
  imgUrl: string
